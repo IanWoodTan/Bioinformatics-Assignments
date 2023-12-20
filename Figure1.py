@@ -5,13 +5,11 @@ import matplotlib.pyplot as plt
 # Your file path  
 file_path = r'D:\KNOWLEDGE\Biology\Bioinformatics\Bioinformatic Exp. term paper\string_interactions (3).csv'  
   
-# Load the data from the CSV file into a Pandas DataFrame  
+
 df = pd.read_csv(file_path)  
-  
-# Create a directed graph from the DataFrame  
 G = nx.from_pandas_edgelist(df, '#node1', 'node2', ['combined_score'])  
   
-''''' 
+'''
 '''  
   
 # Calculate degree centrality for each protein  
@@ -23,7 +21,7 @@ degree_centrality = nx.degree_centrality(G)
 # Calculate betweenness centrality for each protein  
 betweenness_centrality = nx.betweenness_centrality(G)  
   
-''''' 
+'''
 '''  
   
 # Visualize the degree centrality values with a bar plot  
